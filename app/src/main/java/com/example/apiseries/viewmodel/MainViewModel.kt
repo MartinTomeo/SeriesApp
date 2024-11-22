@@ -25,7 +25,7 @@ class MainViewModel : ViewModel() {
                 val response = showApi.getShows(query)
                 if (response.isSuccessful) {
                     Log.d("payload", response.body().toString())
-                    // Check if the response body is not null and contains forecasts
+
 
                     response.body()?.let { showModel ->
                         _showResponse.postValue(ApiResult.Success(showModel)) // Post the list of ShowModelItem
@@ -36,7 +36,7 @@ class MainViewModel : ViewModel() {
                     }
                 } else {
 
-                    Log.d("VIEWMODEL", "response notSuccesful")
+                    Log.d("VIEWMODEL", "response not Succesful")
                     _showResponse.postValue(ApiResult.Error("Error: ${response.code()} - ${response.message()}"))
                 }
             } catch (e: Exception) {

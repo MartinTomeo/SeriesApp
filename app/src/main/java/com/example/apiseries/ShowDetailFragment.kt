@@ -20,10 +20,10 @@ class ShowDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         binding = FragmentMovieDetailBinding.inflate(inflater, container, false)
 
-        // Get the movie data passed from the activity or adapter
+
         arguments?.getParcelable<ShowModelItem>("SHOW_DETAIL")?.let {
             show = it
             displayMovieDetails(show)

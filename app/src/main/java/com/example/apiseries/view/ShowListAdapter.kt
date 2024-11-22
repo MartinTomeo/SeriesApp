@@ -23,7 +23,7 @@ class ShowListAdapter (
         val item = payload[position]
         holder.render(item)
 
-        // Set the click listener for items
+
         holder.itemView.setOnClickListener {
             onItemClick(item)
         }

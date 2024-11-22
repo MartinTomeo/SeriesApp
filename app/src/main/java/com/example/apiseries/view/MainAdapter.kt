@@ -20,7 +20,7 @@ class MainAdapter(private var item: List<ShowDbItem>) :
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         val show = item[position]
-        holder.binding.showQuery.text = "${show.title}"
+        holder.binding.showQuery.text = show.title
     }
 
     override fun getItemCount(): Int = item.size
